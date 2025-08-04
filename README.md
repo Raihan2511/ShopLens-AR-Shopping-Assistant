@@ -23,7 +23,7 @@ ShopLens consists of three core modules that work together seamlessly:
 ### 1. **Object Detection with YOLOS**
 
 * Uses the `hustvl/yolos-small` transformer-based object detection model.
-* Detects fashion items (e.g., shirts, dresses, shoes) in real-time from the camera feed.
+* Detects fashion items (e.g., shirts, dresses, shoes).
 * The highest scoring detection is selected for further processing.
 
 ### 2. **Feature Extraction with FashionCLIP**
@@ -31,7 +31,7 @@ ShopLens consists of three core modules that work together seamlessly:
 * The detected item is passed to **FashionCLIP**, a fine-tuned CLIP model for the fashion domain.
 * Embeds the image into a high-dimensional vector space.
 * Computes cosine similarity between this embedding and pre-embedded dataset images.
-* Top 3 most similar items are retrieved.
+* Top 5 most similar items are retrieved.
 
 ### 3. **Chatbot Interaction**
 
